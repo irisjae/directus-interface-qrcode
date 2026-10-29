@@ -7,4 +7,23 @@ export default {
   icon: "qr_code_2",
   component: InterfaceComponent,
   types: ["string"],
+  options: ({ collection }) => [
+    {
+      field: "ecc",
+      name: "Error Correction Level",
+      type: "string",
+      meta: {
+        width: "half",
+        interface: "select-dropdown",
+        options: {
+          choices: [
+            { text: "L", value: "L" },
+            { text: "M", value: "M" },
+            { text: "Q", value: "Q" },
+            { text: "H", value: "H" },
+          ],
+        },
+      },
+    },
+  ],
 };

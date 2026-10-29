@@ -5,7 +5,7 @@
         v-bind:class="value == '' || !value ? 'hidden' : ''"
         :value="value || ''"
         :size="300"
-        level="H"
+        :level="ecc || 'H'"
       />
     </div>
 </template>
@@ -16,6 +16,7 @@ export default {
   emits: ["input"],
   props: {
     value: String,
+    ecc: String,
   },
   methods: {
     handleChange(value) {
